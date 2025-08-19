@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #131921;
+    /* Amazon navbar color */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* Padding can be kept for outer spacing */
+    gap: 15px;
+    /* Gap for consistent spacing between items */
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    height: 55px;
+    width: 110px;
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    padding-left: 0%;
+    margin-left: 0%;
+    margin: 0%;
+    padding: 0;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+.add-first {
+    font-size: 0.75rem;
+    color: #cccccc;
+    padding-left: 25px;
+}
+
+.add-second {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    width: 900px;
+    height: 40px;
+    border-radius: 4px;
+    /* justify-content is removed to allow flex-grow to work properly */
+    border: 2px solid transparent;
+    /* Prevents layout shift on hover */
+}
+
+
+.search-btn {
+    background-color: #febd69;
+    border: none;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.search-select {
+    width: auto;
+    /* Let the content decide the width */
+    padding: 0 5px;
+    /* Add some padding */
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    background-color: #f3f3f3;
+    color: #0f1111;
+}
+
+.nav-search:hover {
+    border-color: orange;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    flex-grow: 1;
+    /* Allows the input to fill available space */
+    font-size: 1rem;
+}
+
+.language {
+    display: flex;
+    align-items: flex-end;
+    padding: 5px;
+}
+
+.lang-icon {
+    width: 22px;
+    height: 16px;
+    background-image: url("usa_flag.png");
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.lang-name {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.lang-name::after {
+    content: '';
+    /* Required */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #f3f3f3;
+    /* White arrow */
+    margin-left: 5px;
+    vertical-align: middle;
+    /* To align with text */
+}
+
+/** box4 **/
+/* Consider using a more descriptive class name than .span, for example .nav-line-one */
+.span {
+    font-size: 0.75rem;
+}
+
+.nav-signin {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.nav-second1 {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-second2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-second1::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #f3f3f3;
+    /* White arrow */
+    margin-left: 5px;
+}
+
+
+.cart-icon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    margin-right: 0px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/** Panel / Sub-header **/
+.panel {
+    height: 35px;
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* Padding for outer spacing */
+}
+
+.panel2 {
+    font-size: .90rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.menu {
+    font-size: 1rem;
+}
+
+.panel2 a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+
+}
+
+/** Hero Section **/
+
+.hero {
+    background-image: url("hero_image.jpg");
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+
+}
+
+.hero-text {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    /* নতুন যোগ করা হয়েছে */
+    transform: translateX(-50%);
+    /* নতুন যোগ করা হয়েছে */
+    background-color: white;
+    font-size: 0.9rem;
+    width: 98.7%;
+    height: 40px;
+    align-content: center;
+    text-align: center;
+}
+
+.hero-text a {
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.hero-text a:hover {
+    text-decoration: underline;
+}
+
+.box {
+    height: 400px;
+    width: 370px;
+    background-color: red;
+    border-color: black;
+    margin-top: 20px;
+    display: flex;
+
+
+
+}
+
+.footer-top {
+
+    height: 50px;
+    background-color: #3f5067;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: block;
+    align-items: center;
+    align-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.footer-2 {
+    height: 375px;
+    background-color: #232f3e;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-list {
+    list-style: none;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #cccccc;
+
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+
+.footer-3 {
+    height: 125px;
+    background-color: #232f3e;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-top: white 1px solid;
+    gap: 80px;
+
+}
+
+.footer-logo {
+    background-image: url("amazon_logo.png");
+    background-size: cover;
+    width: 100px;
+    height: 50px;
+}
+
+.container {
+    border: white 1px solid;
+    padding: 7px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    display: flex;
+    color: #cccccc;
+    padding-right: 10px;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.main-footer {
+    display: flex;
+    gap: 13px;
+}
+
+.footer-lang {
+    height: 16px;
+    width: 20px;
+    background-image: url("usa_flag.png");
+    background-size: cover;
+    /* ছবিটি যেন পুরো div জুড়ে থাকে */
+    background-position: center;
+    /* ছবিটি যেন মাঝখানে দেখায় */
+    background-repeat: no-repeat;
+    margin-right: 7px;
+}
+
+.container i {
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.footer4-main {
+    padding: 40px 250px;
+    background-color: #131A22;
+    width: 100%;
+    height: 350px;
+    
+}
+
+.footer-4 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px 15px;
+
+}
+
+.grid-item {
+    text-decoration: none;
+    display: block;
+
+}
+
+.grid-item strong {
+    font-size: 0.75rem;
+    color: rgb(209, 207, 207);
+    display: block;
+}
+
+.grid-item span {
+    font-size: 0.70rem;
+    color: #cccccc;
+}
+
+.grid-item:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-5 {
+    height: 78px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: #131A22;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.footer5-text {
+    color: rgba(220, 215, 215, 0.953);
+    font-size: 0.72rem;
+    padding-right: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer5-text:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer5-up img {
+    width: 25px;
+    height: 15px;
+    align-content: center;
+    border-radius: 7px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer5-down {
+    color: rgb(234, 231, 231);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+/* গ্রিড সেকশন */
+
+ .main-section {
+    background: linear-gradient(to bottom, #232f3e 0px, #E3E6E6 400px);
+    height: 2015px;
+    width: 100%;
+ }
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    margin-top: -330px;
+    position: relative;
+    z-index: 1;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    
+}
+
+.box-in img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.box-in, .box-medium, .box-small {
+    padding: 0px 7px;
+    font-size: 0.8rem;
+}
+
+.gridSection-down .box-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.gridSection-down {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 5px;
+
+}
+
+.box strong {
+    font-size: 1.3rem;
+}
+
+.grid-section .box-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* row section */
+.row {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
