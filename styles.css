@@ -43,18 +43,25 @@
 }
 
 .border {
-    border: 1.5px solid transparent;
+    border: 1px solid transparent;
 }
 
-.border:hover {
+.border:hover,
+.border:focus-within {
     border: 1.5px solid var(--amazon-white);
+    outline: none; /* ডিফল্ট নীল আউটলাইন রিমুভ করার জন্য */
+}
+
+.nav-address {
+    display: flex;
+    align-items: center;
+
 }
 
 .add-first {
     display: block;
     font-size: 0.75rem;
     color: var(--amazon-gray);
-    padding-left: 25px;
 }
 
 .add-second {
@@ -65,7 +72,7 @@
 .add-icon {
     display: flex;
     align-items: center;
-    gap: 5px;
+    padding-top: 9px;
 }
 
 .nav-search {
@@ -102,10 +109,21 @@
     border: none;
     background-color: var(--amazon-light-gray);
     color: var(--amazon-text-dark);
+    outline: none;
+}
+
+.search-select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-select:hover {
+    background-color: rgb(222, 221, 221);
 }
 
 .nav-search:hover {
     border-color: orange;
+    border-radius: 7px;
 }
 
 .search-input {
@@ -124,15 +142,14 @@
 }
 
 .lang-icon {
-    width: 22px;
-    height: 16px;
+    width: 21px;
+    height: 15px;
     background-image: url("usa_flag.png");
     background-size: cover;
-    margin-right: 5px;
 }
 
 .lang-name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--amazon-white);
     margin-left: 5px;
     font-weight: 700;
@@ -148,7 +165,8 @@
     border-right: 4px solid transparent;
     border-top: 4px solid var(--amazon-light-gray);
     /* White arrow */
-    margin-left: 5px;
+    margin-left: 3px;
+    padding-top: -9px;
     vertical-align: middle;
     /* To align with text */
 }
@@ -185,12 +203,22 @@
     width: 40px;
     height: 40px;
     background-size: cover;
-    margin-right: 0px;
+    margin-right: -5px;
+
 }
 
 .nav-cart {
-    font-size: 0.85rem;
+    display: flex;
+    align-items: flex-end; /* আইটেমগুলোকে নিচে অ্যালাইন করার জন্য */
+}
+
+.cart-text {
+    font-size: 0.80rem;
     font-weight: 700;
+    margin-left: 5px;
+    color: var(--amazon-white);
+    position: relative;
+    bottom: 5px;
 }
 
 
@@ -277,7 +305,7 @@
 .grid-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px 20px;
+    gap: 20px 20px;
     margin-bottom: 5px;
     background-color: transparent;
     margin: -310px auto 20px auto;
